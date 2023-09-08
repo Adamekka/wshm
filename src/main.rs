@@ -3,10 +3,10 @@ mod ui;
 
 use crate::ui::BuildUI;
 use config::Config;
-use gtk4::prelude::*;
+use gtk4::{glib::ExitCode, prelude::*};
 use std::path::Path;
 
-fn main() {
+fn main() -> ExitCode {
     let home_var = std::env::var("HOME").expect("Failed to get $HOME");
     let config_path = Path::new(&home_var)
         .join(".config")
@@ -28,5 +28,5 @@ fn main() {
         app.build_ui(&config);
     });
 
-    app.run();
+    app.run()
 }
