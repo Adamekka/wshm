@@ -1,0 +1,46 @@
+{
+    "title": "Shutdown Menu",
+    "margins": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+    },
+    "buttons": [
+        {
+            "label": "Lock",
+            "actions": [
+                "loginctl",
+                "lock-session"
+            ]
+        },
+        {
+            "label": "Sleep",
+            "actions": [
+                "systemctl",
+                "suspend"
+            ]
+        },
+        {
+            "label": "Restart",
+            "actions": [
+                "systemctl",
+                "reboot"
+            ]
+        },
+        {
+            "label": "Shutdown",
+            "actions": [
+                "shutdown",
+                "now"
+            ]
+        },
+        {
+            "label": "Logout",
+            "actions": [
+                "loginctl",
+                "terminate-session"
+            ]
+        }
+    ]
+}

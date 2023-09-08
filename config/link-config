@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Link config.json to the config directory
+mkdir -p ~/.config/wshm
+ln ./config.jsonc ~/.config/wshm/config.jsonc
